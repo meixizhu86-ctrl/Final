@@ -8,12 +8,6 @@
 
 ## 二、資料來源
 
-資料來源為老師提供的 SQLite 資料庫：
-
-```text
-D:\FinTech\shioaji.db
-```
-
 本次分析使用的資料表為：
 
 ```text
@@ -97,28 +91,7 @@ data/stock_KBar_2330_2022_2024.csv.gz
 
 如果沒有設定 API key，系統仍會提供基本的離線規則式績效分析。
 
-## 八、執行方式
-
-本機執行方式：
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Streamlit Cloud 部署時，主程式檔案設定為：
-
-```text
-app.py
-```
-
-如果要啟用 DeepSeek 分析功能，需要在 Streamlit Cloud 的 Secrets 中設定：
-
-```toml
-DEEPSEEK_API_KEY = "自己的 DeepSeek API key"
-```
-
-## 九、作業要求對應
+## 八、作業要求對應
 
 | 作業要求 | 完成情況 |
 | --- | --- |
@@ -130,6 +103,3 @@ DEEPSEEK_API_KEY = "自己的 DeepSeek API key"
 | 同時考慮風險與報酬 | 已加入最大回撤、報酬回撤比、類 Sharpe 與綜合分數。 |
 | 生成式 AI 自動評估 | 已加入 DeepSeek 績效分析與追問功能。 |
 
-## 十、風險提醒
-
-本系統的結果是依據歷史資料進行回測，主要用途為課程作業與策略比較。歷史回測績效不代表未來一定會有相同結果，實際交易仍需考慮交易成本、滑價、流動性與市場風險。
